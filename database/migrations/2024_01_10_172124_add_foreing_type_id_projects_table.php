@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('projects', function (Blueprint $table) {
             
             $table->unsignedBigInteger('type_id')->nullable()->after('id');
-            $table->foreign('type_id')->references('id')->on('projects')->onDelete('set null')->onUpdate('cascade');
+            $table->foreign('type_id')->references('id')->on('types')->onDelete('set null')->onUpdate('cascade');
         });
     }
 

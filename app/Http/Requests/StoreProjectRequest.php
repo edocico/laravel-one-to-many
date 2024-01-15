@@ -25,6 +25,7 @@ class StoreProjectRequest extends FormRequest
             'name'=>['required','max:255','min:3'],
             'description'=>['min:20', 'nullable'],
             'link'=>['nullable'],
+            'type_id'=>['required', 'exists:types,id'],
         ];
     }
 }
